@@ -4,7 +4,7 @@ During the project ft_printf I recoded a simple version of the popular C functio
 displays text, and variables embedded in text on the standard-output/terminal.
 
 During the project I learned how to use variadic functions, which are functions that can take a variable
-amount of arguments of variyng data types.
+amount of arguments of variyng data types. And I learned how to manage multiple static libraries in a single project.
 
 The mandatory part of ft_printf involved handling the conversions:
 
