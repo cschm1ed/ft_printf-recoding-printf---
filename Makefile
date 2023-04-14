@@ -1,18 +1,30 @@
-SRCS = ft_printf.c print_decimal.c print_hexpointer.c print_itohex_lower.c \
-		print_itohex_upper.c print_string.c print_unsignedi.c \
-		print_char.c
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: cschmied <cschmied@student.42wolfsburg.    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/04/14 16:25:02 by cschmied          #+#    #+#              #
+#    Updated: 2023/04/14 16:26:14 by cschmied         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-OBJS = $(SRCS:.c=.o)
+VPATH	:=	utils
 
-CC = cc
+SRCS 	:=	ft_printf.c print_decimal.c print_hexpointer.c print_itohex_lower.c \
+			print_itohex_upper.c print_string.c print_unsignedi.c \
+			print_char.c
 
-CFLAGS = -Wall -Werror -Wextra
+OBJS 	:=	$(SRCS:.c=.o)
 
-VPATH = ./srcs
+CC 		:=	cc
 
-NAME = libftprintf.a
+CFLAGS 	:=	-Wall -Werror -Wextra
 
-MAKE = make
+NAME 	:=	libftprintf.a
+
+MAKE 	:=	make
 
 $(NAME): $(OBJS)
 	$(MAKE) libft.a -s

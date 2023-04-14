@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_itohex_lower.c                               :+:      :+:    :+:   */
+/*   print_hexpointer.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cschmied <cschmied@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/09 01:41:31 by cschmied          #+#    #+#             */
-/*   Updated: 2023/01/16 10:50:56 by cschmied         ###   ########.fr       */
+/*   Created: 2023/01/09 14:02:21 by cschmied          #+#    #+#             */
+/*   Updated: 2023/04/14 16:23:36 by cschmied         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// The print_itohex_lower() function takes an unsigned int 'n' and displays
-// its hexadecimal representation in lower-case.
-// The print_itohex_lower() function returns the amount of characters
-// it displayed.
+// The print_hexpointer() function displays a pointer 'n' as it's hexadecimal
+// representation with the prefix '0x'.
+// The print_hexpointer() function returns the amount of characters it 
+// displayed.
 
-#include "ft_printf.h"
+#include "../includes/ft_printf.h"
 
-static void	writenbr_recursively(unsigned int n)
+static void	writenbr_recursively(unsigned long long n)
 {
 	int	digit;
 
@@ -33,7 +33,7 @@ static void	writenbr_recursively(unsigned int n)
 	return ;
 }
 
-static int	get_len(unsigned int n)
+static int	get_len(unsigned long long n)
 {
 	int	i;
 
@@ -46,13 +46,14 @@ static int	get_len(unsigned int n)
 	return (i);
 }
 
-int	print_itohex_lower(unsigned int n)
+int	print_hexpointer(unsigned long long n)
 {
 	if (n == 0)
 	{
-		ft_putchar_fd('0', 1);
-		return (1);
+		ft_putstr_fd("0x0", 1);
+		return (3);
 	}
+	ft_putstr_fd("0x", 1);
 	writenbr_recursively(n);
-	return (get_len(n));
+	return (get_len(n) + 2);
 }

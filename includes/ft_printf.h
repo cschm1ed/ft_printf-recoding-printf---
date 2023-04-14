@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_char.c                                       :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cschmied <cschmied@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/10 13:52:06 by cschmied          #+#    #+#             */
-/*   Updated: 2023/01/16 10:50:17 by cschmied         ###   ########.fr       */
+/*   Created: 2023/01/09 01:06:17 by cschmied          #+#    #+#             */
+/*   Updated: 2023/04/14 16:24:34 by cschmied         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// print_char() displays a single char, and returns 1.
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-#include "ft_printf.h"
+# include <stdarg.h>
+# include "../libft/libft.h"
 
-int	print_char(char c)
-{
-	ft_putchar_fd(c, 1);
-	return (1);
-}
+int	ft_printf(char const *format_string, ...);
+
+int	print_char(char c);
+int	print_decimal(int n);
+int	print_hexpointer(unsigned long long n);
+int	print_itohex_lower(unsigned int n);
+int	print_itohex_upper(unsigned int n);
+int	print_string(const char *str);
+int	print_unsignedi(unsigned int n);
+#endif

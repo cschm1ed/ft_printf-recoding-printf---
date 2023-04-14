@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_string.c                                     :+:      :+:    :+:   */
+/*   print_char.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cschmied <cschmied@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/09 01:30:04 by cschmied          #+#    #+#             */
-/*   Updated: 2023/01/16 10:47:21 by cschmied         ###   ########.fr       */
+/*   Created: 2023/01/10 13:52:06 by cschmied          #+#    #+#             */
+/*   Updated: 2023/04/14 16:23:21 by cschmied         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// The print_string() function takes a string 'str' and displays it on the
-// standard-output.
-// The print_string() function returns the amount of characters it displayed.
+// print_char() displays a single char, and returns 1.
 
-#include "ft_printf.h"
+#include "../includes/ft_printf.h"
 
-int	print_string(const char *str)
+int	print_char(char c)
 {
-	if (!str)
-	{
-		ft_putstr_fd("(null)", 1);
-		return (6);
-	}
-	ft_putstr_fd((char *)str, 1);
-	return (ft_strlen(str));
+	ft_putchar_fd(c, 1);
+	return (1);
 }
