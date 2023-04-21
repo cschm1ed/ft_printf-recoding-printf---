@@ -2,7 +2,7 @@
 
     Variadic Functions: Acquired skills in using variadic functions, which allow functions to accept a variable number of arguments of varying data types.
     Static Libraries: Gained experience in managing multiple static libraries within a single project.
-    Function Implementation: Mastered the implementation of a custom printf() function, understanding the essential aspects of displaying text and variables embedded in text.
+    Function Implementation: Mastered the implementation of a custom printf() function, understanding the essential aspects of displaying text and             variables embedded in text.
 
 ## The ft_printf function handles the following conversions:
 
